@@ -1,0 +1,157 @@
+:root{ 
+    /* use var(--color) */
+--primary-color: #6f8675ff;
+--tertiary-color: #e1dfe2ff;
+--text-color: #050505ff;
+--background-color: #e7decfff;
+--secondary-color: #9a745bff;
+}
+body {
+    background-color: var(--background-color);
+}
+/* Hero image banner with brand name and slogan overlayed */
+.banner {
+    background-image: url('/img/dog-walking-banner.jpg');
+    background-size: cover;  
+    background-position: center;  
+    display: flex;
+    flex-direction: column;  
+    justify-content: flex-start; 
+    align-items: center; 
+    height: 500px;  
+    color: var(--primary-color); 
+    text-shadow: 
+        -2px 2px 0px black; 
+    text-align: center;  
+    padding: 0 20px;
+}
+
+.banner h1 {
+    font-size: 8vw;  
+    margin: 0;
+}
+
+.banner p {
+    font-size: 3vw;
+    color: var(--secondary-color);
+    margin-top: auto;
+}
+
+.about-us {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about-us h2{
+    font-size: 3rem;
+    font-style: oblique;
+    color: var(--secondary-color);
+}
+
+.about-us p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    max-width: 1500px;
+    margin: 20px auto;
+}
+
+.services {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: var(--tertiary-color);
+    text-align: center;
+    flex-wrap: wrap;
+    
+}
+
+.services h2{
+    font-size: 3rem;
+    font-style: oblique;
+    text-align: center;
+    width: 100%;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.service {
+    width: 30%; 
+    padding: 10px;
+    border-radius: 8px; 
+    
+}
+
+#photo {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    border: 5px solid var(--secondary-color);
+    border-radius: 10px;
+
+}
+
+.services h3 {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.services p {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.reviews {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.reviews h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.reviews .review {
+    margin-bottom: 30px;
+}
+
+.reviews p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.reviews p:last-child {
+    font-size: 1.5rem;
+}
+
+footer {
+    padding: 20px 0;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* puts services in a column when screen size is too small to fit all in a row */
+@media screen and (max-width: 1060px) {
+    .services {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .service {
+        width: 80%; 
+        margin-bottom: 20px; 
+    }
+
+    .service img {
+        width: 100%; 
+        height: auto;
+    }
+}
